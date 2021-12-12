@@ -14,7 +14,7 @@
 		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
 		<!-- titlebar -->
-		<widget class="titlebar_panel" id="NHdr" height="60" />
+		<widget class="titlebar_panel" id="NHdr" height="50" />
 
 		<!-- match titlebar -->
 		<widget class="match_titlebar_panel" id="MHdr" height="40" />
