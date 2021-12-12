@@ -14,7 +14,7 @@
     </container>
   </container>
 
-  <widget class="button" appearance="chrome/buttons/date/button" id="actn" click_event="opcl" height="42" width="82" focus_appearance="chrome/buttons/date/button_controller"/>
+  <widget class="button" appearance="" id="actn" click_event="opcl" height="42" width="82" focus_appearance="chrome/buttons/date/button_controller"/>
 
 
 
