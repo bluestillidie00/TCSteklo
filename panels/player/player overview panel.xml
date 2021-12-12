@@ -5,17 +5,34 @@
 
 		<container width="250" priority="1" class="bordered_box">
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-			
+
 			<!-- Header with portrait & important info-->
 			<widget class="player_personal_details_panel" id="ppdp">
 				<record id="object_property" get_property="objt" set_property="objt"/>
 			</widget>
 		</container>
 
-		<container default_width="-3" bkcl="secondary" priority="1" >
+		<container class="vertical_adaptive_container" gap="4" default_width="-3" priority="1" id="mid">
+
+			<container class="client_object_viewer_selector_panel" id="cos1" minimum_height="300" default_height="394" priority="2" file="player/player overview big selector panel" save_session_state="true" >
+				<widget class="player_attributes_panel" id="patt" late_loading="true" dont_allow_custom_attribute_change_ranges="true">
+					<translation id="title" translation_id="229822" type="use" value="Attributes" />
+				</widget>		
+			</container>
+
+			<container default_height="-1" class="subsection_box"  priority="1">
+				<layout class="horizontal_arrange" horizontal_layout="-8,-12"  />
+
+<widget class="player_positions_indicator_panel" id="ppi1" file="player/player positions indicator small horizontal" navigation_container="true" default_focus="true" >
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+			
+			<container />
+
+			</container>
 		</container>
 
-		<container default_width="-1" bkcl="bg" priority="2" minimum_width="270"  >
+		<container default_width="-1" bkcl="bg" priority="2" minimum_width="270" id="right">
 		</container>
 
 	</container>
