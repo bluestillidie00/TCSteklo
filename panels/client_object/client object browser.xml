@@ -177,11 +177,11 @@
                             </attachment>
 
                             <layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
-                            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+                            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="5" apply_to_children="true" />
 
                             <!--tab bar-->
                             <!-- @archie.buck The tutorial relies on this id not changing, if you need to adjust it please let me know -->
-                            <container height="36" id="tabz">
+                            <container height="40" id="tabz">
                                 <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
                                 <!-- hide this panel in "navigation disabled" mode -->
@@ -195,7 +195,7 @@
                                 </attachment>
 
                                 <!-- coloured actions bar image -->
-                                <widget class="main_box" id="ACTb" appearance="boxes/custom/interface/tab bar/paper" red_replacement="primary"/>
+                                <widget class="main_box" id="ACTb" appearance="tcs/interface/tab bar bottom/paper" />
 
                                 <container>
                                     <layout class="arrange_horizontal_attachment" alignment="right,extend" gap="2" offset="14" />
