@@ -1,0 +1,153 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="scrolling_box">
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="10"/>
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="10"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<!--logo-->
+			<widget class="picture" id="pict" height="180" scale_picture="true">
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre" />
+				<record id="object_property">
+					<integer id="get_property" value="mnpc" />
+				</record>
+			</widget>
+
+			<!--division/country-->
+			<container height="90">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+
+				<!--division logo-->
+				<widget class="object_portrait_picture" id="lepi" height="40" width="50">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					<boolean id="scale_picture" value="true"/>
+					<boolean id="keep_aspect_ratio" value="true"/>
+					<flags id="image_alignment" value="centre"/>
+
+					<record id="object_property">
+						<integer id="get_property" value="Cdiv"/>
+						<integer id="set_property" value="objt"/>
+					</record>
+				</widget>
+
+				<!--division-->
+				<widget class="comp_button" id="comp" icon_enabled="false" comp_display_type="1" alignment="centre" font="fonts/letterpressed">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					<record id="object_property">
+						<integer id="get_property" value="Cdiv"/>
+					</record>
+				</widget>
+
+				<!--country-->
+				<widget class="nation_button" id="nati" auto_size="all" alignment="centre">
+					<layout class="centre_in_parent_attachment" alignment="horizontal" inset="0"/>
+					<record id="object_property">
+						<integer id="get_property" value="Cnat" />
+					</record>
+				</widget>
+			</container>
+
+			<!--year founded-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="dashed_number_label" spec="text,large,bold" id="yrfd" size="13" alignment="centre_x,bottom" auto_size="vertical" font="fonts/letterpressed">
+					<boolean id="NumF" value="0"/>
+					<record id="object_property">
+						<integer id="get_property" value="Cyfn" />
+					</record>
+				</widget>
+				<widget class="label" id="yrfL" spec="text,small" alignment="centre_x,top" auto_size="vertical" font="fonts/letterpressed">
+					<record id="object_property">
+						<integer id="get_property" value="Cyfn" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+			</container>
+
+			<!--professional status-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="professional_status_label" spec="text,large,bold" id="pros" size="13" alignment="centre_x,bottom" auto_size="vertical" font="fonts/letterpressed">
+					<record id="object_property">
+						<integer id="get_property" value="Cprs" />
+					</record>
+				</widget>
+				<widget class="label" id="proL" spec="text,small" alignment="centre_x,top" auto_size="vertical" font="fonts/letterpressed">
+					<record id="object_property">
+						<integer id="get_property" value="Cprs" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+			</container>
+
+			<!--reputation-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+
+				<widget class="reputation_label" spec="text,large,bold" id="crep" mode="1" size="13" alignment="centre_x,bottom" auto_size="vertical" font="fonts/letterpressed">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+					<record id="object_property">
+						<integer id="get_property" value="Crsc" />
+					</record>
+				</widget>
+				<widget class="label" id="creL" spec="text,small" alignment="centre_x,top" auto_size="vertical" font="fonts/letterpressed">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+					<record id="object_property">
+						<integer id="get_property" value="Crsc" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+			</container>
+			
+			<!--finances-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="financial_status_label" spec="text,large,bold" id="Csfs" size="13" alignment="centre_x,bottom" auto_size="vertical" font="fonts/letterpressed">
+					<record id="object_property">
+						<integer id="get_property" value="Csfs" />
+					</record>
+				</widget>
+				<widget class="label" id="cfiL" spec="text,small" alignment="centre_x,top" auto_size="vertical" font="fonts/letterpressed">
+					<record id="object_property">
+						<integer id="get_property" value="Csfs" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+			</container>
+			
+			<!--continental competition-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="comp_button" spec="text,large,bold" id="ccon" size="13" alignment="centre_x,bottom" auto_size="vertical" font="fonts/letterpressed" icon_enabled="false">
+					<record id="object_property">
+						<integer id="get_property" value="Ccon" />
+					</record>
+				</widget>
+				<widget class="label" id="ccoL" spec="text,small" alignment="centre_x,top" auto_size="vertical" font="fonts/letterpressed">
+					<record id="object_property">
+						<integer id="get_property" value="Ccon" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+			</container>
+
+		</container>
+	</container>
+</panel>
