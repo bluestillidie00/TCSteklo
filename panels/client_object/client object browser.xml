@@ -25,9 +25,10 @@
             <integer id="set_property" value="hidn" />
         </attachment>
     </widget>
-	
-<!-- background support overlay needed as the sidebar is now transparent, to adjust strength alter transparency 0.0 is transparent, 1 is solid, 0.5 is 50% etc... -->
-	    <widget class="picture" file="boxes/bordered/solid/paper" red_replacement="bg"  transparency="0.4"> <!-- overlay -->
+
+    <!-- background support overlay needed as the sidebar is now transparent, to adjust strength alter transparency 0.0 is transparent, 1 is solid, 0.5 is 50% etc... -->
+    <widget class="picture" file="boxes/bordered/solid/paper" red_replacement="bg"  transparency="0.4">
+        <!-- overlay -->
         <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
         <attachment class="test_multiple_globals_attachment" default_value="false">
             <list id="get_properties">
@@ -39,8 +40,9 @@
         </attachment>
     </widget>
 
-<!-- For Background support adjust transparency value. 0.0 is transparent, 1 is solid, 0.5 is 50% etc... This is the purple pattern mainly shown on sidebar -->
-    <widget class="picture" file="boxes/custom/interface/background pattern/paper" id="BgPa" transparency="0">	<!-- pattern -->
+    <!-- For Background support adjust transparency value. 0.0 is transparent, 1 is solid, 0.5 is 50% etc... This is the purple pattern mainly shown on sidebar -->
+    <widget class="picture" file="boxes/custom/interface/background pattern/paper" id="BgPa" transparency="0">
+        <!-- pattern -->
         <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
         <attachment class="test_multiple_globals_attachment" default_value="false">
             <list id="get_properties">
@@ -52,8 +54,9 @@
         </attachment>
     </widget>
 
-<!-- For Background support adjust transparency value. 0.0 is transparent, 1 is solid, 0.5 is 50% etc... This covers the main content area but not sidebar -->
-    <widget class="inner_contrast_box" appearance="boxes/custom/interface/content/paper" transparency="0">	<!-- content -->
+    <!-- For Background support adjust transparency value. 0.0 is transparent, 1 is solid, 0.5 is 50% etc... This covers the main content area but not sidebar -->
+    <widget class="inner_contrast_box" appearance="boxes/custom/interface/content/paper" transparency="0">
+        <!-- content -->
         <layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="mai1"/>
         <layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="mai1"/>
         <layout class="stick_to_object_attachment" id="align_right" get_side="right" use_recursive_search="true" set_side="left" target="side"/>
@@ -226,9 +229,7 @@
 
                                     <!-- screen content area -->
                                     <container id="scca" auto_size="horizontal">
-                                        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true">
-                                            <global id="inset" name="ui.main_content_margin"/>
-                                        </layout>
+                                        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="2"/>
                                     </container>
                                 </container>
                             </container>
