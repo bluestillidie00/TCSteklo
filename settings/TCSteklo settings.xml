@@ -1,0 +1,11 @@
+<properties version="1.0">
+
+	<colour name="sidebar_background" red="35" green="35" blue="45"/>
+	<colour name="sidebar_trim" red="255" green="255" blue="255"/>
+	<colour name="sidebar_trim2" red="0" green="0" blue="0"/>
+	<colour name="menubar_header_background" red="35" green="35" blue="45"/> <!-- Menubar background - red_replacement -->
+	<colour name="menubar_header_border2" red="240" green="240" blue="240"/> <!-- Menubar borders - blue_replacement -->
+	<colour name="menubar_header_border" red="20" green="20" blue="20"/> <!-- Menubar shadow - green_replacement -->
+	
+
+</properties>
