@@ -1,0 +1,23 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="horizontal_adaptive_container" gap="4" id="left">
+
+		<container width="250" priority="1" class="bordered_box">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+			
+			<!-- Header with portrait & important info-->
+			<widget class="player_personal_details_panel" id="ppdp">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+
+		<container default_width="-3" bkcl="secondary" priority="1" >
+		</container>
+
+		<container default_width="-1" bkcl="bg" priority="2" minimum_width="270"  >
+		</container>
+
+	</container>
+
+</panel>
