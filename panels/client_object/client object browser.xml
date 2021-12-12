@@ -27,7 +27,8 @@
     </widget>
 
     <!-- background support overlay needed as the sidebar is now transparent, to adjust strength alter transparency 0.0 is transparent, 1 is solid, 0.5 is 50% etc... -->
-    <widget class="picture" file="boxes/bordered/solid/paper" red_replacement="bg"  transparency="0.4">
+    <!-- <widget class="picture" file="boxes/bordered/solid/paper" red_replacement="bg"  transparency="0.4"> -->
+    <widget class="picture" file="boxes/bordered/solid/paper" red_replacement="bg"  transparency="0.0">
         <!-- overlay -->
         <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
         <attachment class="test_multiple_globals_attachment" default_value="false">
@@ -88,6 +89,16 @@
             <integer id="set_property" value="hidn" />
         </attachment>
     </widget>
+
+    <container file="background_selector/backgrounds" >
+        <attachment class="test_multiple_globals_attachment" default_value="false">
+            <list id="get_properties">
+                <record get_property="MatS" test_mode="equal" value="true" skip_if_null="true" />
+                <record get_property="Ma3D" test_mode="equal" value="true" comparison_mode="or" skip_if_null="true" />
+            </list>
+            <integer id="set_property" value="hidn" />
+        </attachment>
+    </container>
 
     <!-- custom background scene -->
     <container id="cBsC">
@@ -211,11 +222,32 @@
                                     <!--Match Options-->
                                     <widget class="match_tactics_toggle_button" />
 
+                                    <!-- Graphics Options-->
+                                    <widget class="icon_button" appearance="buttons/custom/interface/general/button" alignment="centre" icon="tcs/icons/bgselect" width="26" rrep="fg" >
+                                                                <record id="primary_icon_properties" red_replacement="fg" />
+                                        <event id="click_event" event_id="kev3"/>
+                                        <attachment class="event_relay_attachment" event_id="kev3">
+                                            <record id="action_event">
+                                                <flags id="event_id" value="show"/>
+                                                <flags id="event_target" value="bgs1"/>
+                                            </record>
+                                        </attachment>
+                                    </widget>
+
                                     <!--Backroom Advice-->
                                     <widget class="backroom_advice_trigger_button" id="BaC1" />
 
                                     <!--Backroom Advice 'popup'-->
                                     <widget class="backroom_advice_trigger_button" id="BaC2" file="club/backroom advice trigger button popup panel" disable_layout_attachments_when_embedded="true" hidden="true" />
+
+                                    <!-- calendar button -->
+                                    <widget class="current_game_date_widget" id="cgdw" height="44">
+                                        <attachment class="test_global_attachment" get_property="cont" set_property="disa">
+                                            <list id="value">
+                                                <integer value="-5" />
+                                            </list>
+                                        </attachment>
+                                    </widget>
                                 </container>
                             </container>
 

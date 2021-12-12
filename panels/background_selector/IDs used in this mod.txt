@@ -1,0 +1,13 @@
+
+***global panels.xml***
+
+bgs1 - container showing the selector panel
+
+***bgsmod11/backgrounds.xml***
+
+1pic
+2pic
+3pic
+4pic
+5pic
+6pic - All six IDs
