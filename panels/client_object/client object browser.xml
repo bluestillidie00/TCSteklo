@@ -117,8 +117,8 @@
                 <integer id="set_property" value="FoHi" />
             </attachment>
 
-            <attachment class="test_setting_attachment" get_setting="force_small_sidebar" value="true" skip_if_false="true" default_value="false" set_property="widt" true_value="45"/>
-            <attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1200" set_property="widt" true_value="45" false_value="160" disable_setting_name="force_small_sidebar"/>
+            <attachment class="test_setting_attachment" get_setting="force_small_sidebar" value="true" skip_if_false="true" default_value="false" set_property="widt" true_value="75"/>
+            <attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1200" set_property="widt" true_value="75" false_value="160" disable_setting_name="force_small_sidebar"/>
         </widget>
 
         <container>
