@@ -18,7 +18,7 @@
 			<container class="horizontal_adaptive_container" id="top " offset="0" inset="0" gap="4" minimum_height="370" default_height="-2" default_width="-2" priority="1" >
 
 				<!-- Default: Biography -->
-				<container class="client_object_viewer_selector_panel" id="cos1" default_width="-6" priority="1" maximum_width="170" file="player/player overview big selector panel" save_session_state="true">
+				<container class="client_object_viewer_selector_panel" id="cos1" default_width="-7" priority="1" maximum_width="170" file="player/player overview big selector panel" save_session_state="true">
 					<widget class="player_attributes_panel" id="patt" late_loading="true" dont_allow_custom_attribute_change_ranges="true">
 						<translation id="title" translation_id="229822" type="use" value="Attributes" />
 					</widget>
