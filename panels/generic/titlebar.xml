@@ -75,7 +75,7 @@
                         <container id="flik">
                             <attachment_group class="horizontal_arrange_autosize"/>
 
-                            <container width="30" />
+                            <container width="50" />
 
                             <!--quick flicks-->
                             <container width="20">
