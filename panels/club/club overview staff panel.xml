@@ -3,10 +3,10 @@
 	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0"/>
 	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 
-	<container class="vertical_adaptive_container" inset="0" offset="0" gap="4" id="zzzz">
+	<container class="vertical_adaptive_container" inset="0" offset="0" gap="8" id="zzzz">
 
 		<!--manager-->
-		<container default_height="44" priority="1">
+		<container default_height="-1" priority="1" class="main_box" appearance="tcs/boxes/stripe/paper">
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
 			<container id="manC">
@@ -38,7 +38,7 @@
 
 
 		<!--captain-->
-		<container default_height="44" priority="1">
+		<container default_height="-1" priority="1" class="main_box" appearance="tcs/boxes/stripe/trans/paper">
 			<layout class="arrange_horizontal_attachment" layout="-3,-4" />
 			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
@@ -54,7 +54,7 @@
 		</container>
 
 		<!--vice captain-->
-		<container default_height="44" priority="2">
+		<container default_height="-1" priority="1" class="main_box" appearance="tcs/boxes/stripe/paper">
 			<layout class="arrange_horizontal_attachment" layout="-3,-4" />
 			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
@@ -70,7 +70,7 @@
 		</container>
 
 		<!--key player-->
-		<container default_height="44" priority="3">
+		<container default_height="-1" priority="1" class="main_box" appearance="tcs/boxes/stripe/trans/paper">
 			<layout class="arrange_horizontal_attachment" layout="-3,-4" />
 			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
@@ -86,7 +86,7 @@
 		</container>
 
 		<!--hot prospect-->
-		<container id="HotC" default_height="44" priority="4">
+		<container default_height="-1" priority="1" class="main_box" appearance="tcs/boxes/stripe/paper">
 			<layout class="arrange_horizontal_attachment" layout="-3,-4" />
 			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 

@@ -1,260 +1,81 @@
 <panel>
-	<set_var name="shared_layout">
-		<layout class="stick_to_sides_attachment" alignment="top,horizontal" inset="0" apply_to_children="true" />
-	</set_var>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="8" />
 
-	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
-	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-	<container>
-		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="15"/>
-		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+	<widget class="stadium_picture" id="STAp" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" priority="1" width="400">
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+	</widget>	 
 
-		<container class="vertical_label_value_pair" value_widget="namV" label_widget="namL">
+	<container >
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="0" />
 
-			<!--name-->
-			<widget class="client_object_label" id="namV">
-				<record id="object_property">
-					<integer id="get_property" value="objt" />
-				</record>
-			</widget>
-			<!--town-->
-			<widget class="city_label" id="namL">
-				<record id="object_property">
-					<integer id="get_property" value="SctI" />
-				</record>
-			</widget>
-		</container>
+		<record id="default_properties" auto_size="vertical" alignment="centre_x"/>
 
-		<widget class="horizontal_divider" auto_size="vertical" />
+		<widget class="stadium_button" icon_enabled="false" size="12"  font="title"  colour="fg">
+			<record id="object_property">
+				<integer id="get_property" value="stad" />
+			</record>
+		</widget>
+
+		<widget class="city_label" font="label"  colour="faded text">
+			<record id="object_property">
+				<integer id="get_property" value="SctI" />
+			</record>
+		</widget>			
+	</container>
+
+	<container height="42" >
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
 
 		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="0" />
 
-			<record id="default_properties" default_width="-1" />
+			<record id="default_properties" auto_size="vertical" alignment="centre_x"/>
 
-			<layout class="grid_layout_attachment" row_layout="-1,-1,-1" mode="auto" vertical_gap="0" vertical_offset_start="0" vertical_offset_end="6">
-				<list id="column_layout">
-					<record>
-						<string id="column_layout" value="-1,-1,-1" />
-						<integer id="horizontal_offset" value="0" />
-						<integer id="horizontal_gap" value="0" />
-					</record>
-					<record>
-						<string id="column_layout" value="-1,-1" />
-						<integer id="horizontal_offset" value="0" />
-					</record>
-					<record>
-						<string id="column_layout" value="-1,-1,-1" />
-						<integer id="horizontal_offset" value="0" />
-						<integer id="horizontal_gap" value="0" />
-					</record>
-				</list>
-			</layout>
+			<widget class="dashed_number_label" size="12" colour="fg" style="bold">
+				<record id="object_property">
+					<integer id="get_property" value="Scpy" />
+				</record>
+			</widget>
 
-			<container priority="1" minimum_width="120">
-				<var name="shared_layout" />
-
-				<!--used capacity. Show if it's present-->
-				<container class="vertical_label_value_pair" value_widget="SucV" label_widget="SucL">
-
-					<record id="object_property" get_property="Sucy" set_property="Shwn" />
-
-					<widget class="label" id="SucL">
-						<record id="object_property">
-							<integer id="get_property" value="Sucy" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<!--used capacity-->
-					<widget class="dashed_number_label" id="SucV">
-						<translation id="format" translation_id="356426" type="use" value="[%number#1][COMMENT: stadium capacity. Primarily for Korean as a marker needs to be added to indicate it's for a count of people]" />
-						<record id="object_property">
-							<integer id="get_property" value="Sucy" />
-						</record>
-					</widget>
-
-				</container>
-
-				<!--regular capacity. Show if there's no Used Capacity-->
-				<container class="vertical_label_value_pair" value_widget="capa" label_widget="capL">
-
-					<record id="object_property" get_property="Sucy" set_property="hidn" />
-					<widget class="label" id="capL">
-						<record id="object_property">
-							<integer id="get_property" value="Scpy" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<!--capacity-->
-					<widget class="dashed_number_label" id="capa">
-						<translation id="format" translation_id="356426" type="use" value="[%number#1][COMMENT: stadium capacity. Primarily for Korean as a marker needs to be added to indicate it's for a count of people]" />
-						<record id="object_property">
-							<integer id="get_property" value="Scpy" />
-						</record>
-					</widget>
-
-				</container>
-			</container>
-
-			<container priority="2" minimum_width="140">
-
-				<var name="shared_layout" />
-
-				<!--used capacity. Show if it's present-->
-				<container class="vertical_label_value_pair" value_widget="surV" label_widget="surL">
-
-					<widget class="label" id="surL">
-						<record id="object_property">
-							<integer id="get_property" value="SsfT" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<!--surface type-->
-					<widget class="pitch_surface_type_label" id="surV">
-						<record id="object_property">
-							<integer id="get_property" value="SsfT" />
-						</record>
-						<record id="auto_size_restrictions">
-							<string id="type" value="property"/>
-							<string id="limit_type" value="maximum"/>
-							<string id="orientation" value="vertical"/>
-							<flags id="target" value="surV"/>
-							<integer id="value" value="2"/>
-							<flags id="property" value="restrict_to_lines"/>
-						</record>
-					</widget>
-
-				</container>
-
-			</container>
-
-			<container priority="3" minimum_width="120">
-				<var name="shared_layout" />
-
-				<!--used capacity. Show if it's present-->
-				<container class="vertical_label_value_pair" value_widget="SdcV" label_widget="SdcL">
-
-					<widget class="label" id="SdcL">
-						<record id="object_property">
-							<integer id="get_property" value="Sdcy" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<!--condition of stadium-->
-					<widget class="stadium_condition_label" id="SdcV">
-						<record id="object_property">
-							<integer id="get_property" value="Sdcy" />
-						</record>
-					</widget>
-
-				</container>
-			</container>
-
-			<container priority="4" minimum_width="120">
-				<var name="shared_layout" />
-
-				<!--used capacity. Show if it's present-->
-				<container class="vertical_label_value_pair" value_widget="SdiV" label_widget="SdiL">
-					<widget class="label" id="SdiL">
-						<record id="object_property">
-							<integer id="get_property" value="Sdim" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<!--pitch dimension-->
-					<widget class="dimension_label" format="1" id="SdiV">
-						<record id="object_property">
-							<integer id="get_property" value="Sdim" />
-						</record>
-					</widget>
-
-				</container>
-			</container>
-
-
-			<container priority="5" minimum_width="120">
-				<var name="shared_layout" />
-
-				<!--used capacity. Show if it's present-->
-				<container class="vertical_label_value_pair" value_widget="SbdV" label_widget="SbdL">
-					<widget class="label" id="SbdL">
-						<record id="object_property">
-							<integer id="get_property" value="Sbdy" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<!-- year built -->
-					<widget class="dashed_number_label" id="SbdV" NumF="0">
-						<record id="object_property">
-							<integer id="get_property" value="Sbdy" />
-						</record>
-					</widget>
-
-				</container>
-			</container>
-
-			<container priority="5" minimum_width="120" class="client_object_viewer_xml_panel" id="CstC">
-				<var name="shared_layout" />
-
-				<!--used capacity. Show if it's present-->
-				<container class="vertical_label_value_pair" value_widget="CstL" label_widget="CstV">
-					<widget class="label" id="CstV">
-						<record id="object_property">
-							<integer id="get_property" value="Csth" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<!-- year built -->
-					<widget class="dashed_number_label" id="CstL" NumF="0">
-						<record id="object_property">
-							<integer id="get_property" value="Csth" />
-						</record>
-					</widget>
-
-				</container>
-			</container>
-
-			<container priority="5" minimum_width="120" class="client_object_viewer_xml_panel" id="CsTC">
-				<var name="shared_layout" />
-
-				<!--used capacity. Show if it's present-->
-				<container class="vertical_label_value_pair" value_widget="CsTV" label_widget="CsTL">
-					<widget class="label" id="CsTL">
-						<record id="object_property">
-							<integer id="get_property" value="Cstp" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<!-- year built -->
-					<widget class="cash_cell" id="CsTV" NumF="0">
-						<string id="format" value="[%cash#1-roundlarge]" />
-						<record id="object_property">
-							<integer id="get_property" value="Cstp" />
-						</record>
-					</widget>
-
-				</container>
-			</container>
-
-			<container priority="5" minimum_width="120" class="client_object_viewer_xml_panel" id="CtpC">
-				<var name="shared_layout" />
-
-				<!--used capacity. Show if it's present-->
-				<container class="vertical_label_value_pair" value_widget="CtpV" label_widget="CtpL">
-
-					<widget class="label"  id="CtpL">
-						<record id="object_property" name="true">
-							<string id="get_property" value="Ctpr" />
-						</record>
-					</widget>
-					<widget class="cash_cell" id="CtpV">
-						<string id="format" value="[%cash#1-roundlarge]" />
-						<record id="object_property">
-							<string id="get_property" value="Ctpr" />
-						</record>
-					</widget>
-				</container>
-			</container>
-
+			<widget class="label" font="label"  colour="faded text">
+				<translation id="text" translation_id="252902" type="use" value="Capacity" />
+			</widget>			
 		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="0" />
+
+			<record id="default_properties" auto_size="vertical" alignment="centre_x"/>
+
+			<widget class="dashed_number_label" size="12" colour="fg" style="bold">
+				<record id="object_property">
+					<integer id="get_property" value="Sbdy" />
+				</record>
+			</widget>
+
+			<widget class="label" font="label"  colour="faded text">
+				<translation id="text" translation_id="284334" type="use" value="Year Built[COMMENT: heading; team_information_panel; year the stadium was build on]" />
+			</widget>			
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="0" />
+
+			<record id="default_properties" auto_size="vertical" alignment="centre_x"/>
+
+			<widget class="pitch_condition_label" size="12" colour="fg" style="bold">
+				<record id="object_property">
+					<integer id="get_property" value="Sptc" />
+				</record>
+			</widget>
+
+			<widget class="label" font="label"  colour="faded text">
+				<translation id="text" translation_id="282080" type="use" value="Pitch Condition[COMMENT: heading; team_information_panel; max pitch dimensions]" />
+			</widget>			
+		</container>
+
 	</container>
 </panel>
