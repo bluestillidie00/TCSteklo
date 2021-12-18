@@ -1,5 +1,7 @@
 <properties version="1.0">
 
+	<colour name="news item" value="bg accent"/>
+
 	<colour name="sidebar_background" red="35" green="35" blue="45"/>
 	<colour name="sidebar_trim" red="255" green="255" blue="255"/>
 	<colour name="sidebar_trim2" red="0" green="0" blue="0"/>
@@ -9,5 +11,6 @@
 	
 	<colour name="bg"	value="rgb(35,35,35)"/>
 	<colour name="bg lighter"	value="rgb(55,55,55)"/>
-
+	
+	
 </properties>

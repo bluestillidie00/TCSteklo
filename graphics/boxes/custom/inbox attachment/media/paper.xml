@@ -1,0 +1,11 @@
+<properties>
+	<!-- image borders -->
+	<record id="image_borders" left="10" right="2" top="6" bottom="9"/>
+
+	<!-- image slices determine the points at which the image will be sliced to enable scaling -->
+	<record id="image_slices" left="10" right="10" top="10" bottom="10"/>
+
+	<colour id="red_replacement" name="inbox_attachment_background"/>
+	<colour id="blue_replacement" name="black"/>
+	<colour id="green_replacement" name="fg accent"/>	
+</properties>
